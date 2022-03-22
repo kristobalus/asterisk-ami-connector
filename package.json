@@ -1,0 +1,49 @@
+{
+  "name": "asterisk-ami-connector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build/",
+    "build": "./node_modules/typescript/bin/tsc",
+    "ts-node": "ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristobalus/asterisk-ami-connector.git"
+  },
+  "author": "Ildar Tamendarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristobalus/asterisk-ami-connector/issues"
+  },
+  "homepage": "https://github.com/kristobalus/asterisk-ami-connector#readme",
+  "dependencies": {
+    "async": "^3.2.1",
+    "bunyan": "^1.8.15",
+    "bunyan-prettystream": "^0.1.3",
+    "express": "^4.17.3",
+    "ioredis": "^4.28.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "prom-client": "^14.0.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.3.0",
+    "typedi": "^0.10.0",
+    "typescript": "^4.3.2",
+    "uuid": "^8.3.2",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.8",
+    "@types/axios": "^0.14.0",
+    "@types/bunyan": "^1.8.6",
+    "@types/ioredis": "^4.27.8",
+    "@types/lodash": "^4.14.178",
+    "@types/moment": "^2.13.0",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^15.14.9",
+    "@types/uuid": "^8.3.1"
+  }
+}
