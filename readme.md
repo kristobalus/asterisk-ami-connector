@@ -9,3 +9,14 @@ This application puts Redis storage as a middleware between high-load intensive 
 for analytical or management purposes.
 You can connect multiple Asterisk instance to same Redis instance. 
 Their data are isolated by Redis database switching (refer SELECT command in Redis documentation).
+
+### Deployment
+
+The app is dockerized. It starts two containers: one for AmiClient and redis instance. Redis is configured to turn off
+data persistence, so it is a pure in-memory storage. That provides a stunning Redis performance for storing or 
+retrieving Asterisk channel data.
+
+### Prometheus monitoring
+
+AmiClient implements its own statistics for read/sent bytes and AMI message counter. The data are collected by 
+Prometheus metrics endpoint and published upon request.
