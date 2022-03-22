@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "target": "es2021",
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./build"
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "docker",
+    "tests"
+  ]
+}

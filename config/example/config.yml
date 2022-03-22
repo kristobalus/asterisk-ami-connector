@@ -1,0 +1,21 @@
+version: 2
+
+asterisk:
+  asterisk-connector-1:
+    amiUsername: "username"
+    amiSecret: "secret"
+    amiHost: "1.2.3.4"
+    amiPort: 5090
+
+storage:
+  asterisk-connector-1:
+    redis:
+      host: "redis"
+      port: 6379
+      db: 1
+
+queue:
+  redis:
+    host: "redis"
+    port: 6379
+    db: 0

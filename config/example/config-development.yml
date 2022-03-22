@@ -1,0 +1,14 @@
+version: 2
+
+asterisk:
+  asterisk-connector-1:
+    amiHost: "localhost"
+
+storage:
+  asterisk-connector-1:
+    redis:
+      host: 'localhost'
+
+queue:
+  redis:
+    host: "localhost"

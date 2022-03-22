@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  asterisk-connector-1:
+    build:
+      context: .
+      dockerfile: docker/asterisk-connector/Dockerfile
+    container_name: "${NAME}-asterisk-connector-1"
+    environment:
+      NODE_ENV: "production"
+      CONFIG_PATH: "${CONFIG_PATH}"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100M"
+        max-file: "2"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    depends_on:
+      - redis
+    networks:
+      - app
+
+

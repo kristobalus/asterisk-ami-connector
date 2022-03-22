@@ -1,0 +1,26 @@
+# игнорировать каталоги docker и environment
+docker/
+node_modules/
+build/
+
+# игнорировать каталоги .git и .cache
+.git
+.cache
+.idea
+.gitignore
+.run
+.eslintrc.json
+.DS_Store
+
+# игнорировать все файлы markdown (md) кроме всех файлов README*.md, исключая README-secret.md
+*.md
+!README*.md
+README-secret.md
+
+# игнорировать скрипты деплоя
+bitbucket-pipelines-*.yml
+bitbucket-pipelines-*.sh
+deploy.sh
+
+# игнорировать docker-compose
+*.yml

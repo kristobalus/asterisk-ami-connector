@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+
+  redis:
+    build:
+      context: .
+      dockerfile: docker/redis/Dockerfile
+    container_name: "${NAME}-redis"
+    volumes:
+      - ./docker/redis/data:/data
+      - ./docker/redis/redis.conf:/usr/local/etc/redis/redis.conf
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100M"
+        max-file: "2"
+    restart: "no"
+    ports:
+      - "127.0.0.1:6379:6379"
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
